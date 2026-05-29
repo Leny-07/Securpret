@@ -88,7 +88,7 @@
   // ── Appel API ────────────────────────────────────────────────
   function fetchReviews() {
     // Endpoint Avis Vérifiés / Skeepers — avis marque
-    var url = 'https://api.avis-verifies.com/api/v2.0/review/list'
+    var url = 'https://long-salad-0bf5.lenycapelli222.workers.dev/api/v2.0/review/list'
       + '?apikey=' + AV_API_KEY
       + '&secretkey=' + AV_SECRET_KEY
       + '&nb_par_page=30'
