@@ -1,4 +1,3 @@
-
 :root {
   --color-primary: #314275;
   --color-primary-dark: #071637;
@@ -989,4 +988,3 @@ ul{list-style:none;padding:0;margin:0;}
 /* ===== PAGE SWITCHING ===== */
 .page { display: none; }
 .page.active { display: block; }
-
