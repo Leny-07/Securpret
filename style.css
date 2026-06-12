@@ -988,3 +988,48 @@ ul{list-style:none;padding:0;margin:0;}
 /* ===== PAGE SWITCHING ===== */
 .page { display: none; }
 .page.active { display: block; }
+
+
+
+/* ============================================================= */
+/* === RESPONSIVE — FILETS DE SÉCURITÉ GLOBAUX (375px+) ======== */
+/* Ajouté après audit : le site était déjà responsive par page.  */
+/* Ces règles garantissent zéro débordement horizontal et des    */
+/* médias fluides sur tous les écrans, sans modifier le desktop.  */
+/* ============================================================= */
+
+/* 1) Empêcher tout débordement horizontal de la page */
+html, body { overflow-x: hidden; max-width: 100%; }
+
+/* 2) Médias fluides par défaut (images, svg, vidéos) */
+img, svg, video, picture { max-width: 100%; height: auto; }
+/* Exception : on préserve les <img> qui ont une hauteur fixée volontairement
+   (photos hero/portraits) déjà gérées par les media queries existantes. */
+.ae-hero__img-wrap img,
+.ne-hero__img-wrap img,
+.ne-fondateurs__photo-main img,
+.ne-fondateurs__photo-frame img,
+.ne-equilibre__photo img { height: 100%; }
+
+/* 3) Mobile (max-width: 768px) — ajustements fins */
+@media (max-width: 768px) {
+  /* Titres très grands : éviter qu'un mot long ne déborde */
+  .hero__title, .ae-hero__title, .ne-hero__title,
+  .ct-hero__title, .legal-hero__title { word-break: break-word; hyphens: auto; }
+
+  /* Conteneurs : padding latéral garanti */
+  .container, .ae-hero, .ne-hero, .ct-hero { padding-left: var(--gutter); padding-right: var(--gutter); }
+
+  /* Boutons CTA en pleine largeur pour le confort tactile */
+  .ae-hero__ctas, .ne-cta__btns { width: 100%; }
+  .ae-hero__ctas .btn, .ne-cta__btns .btn { width: 100%; text-align: center; }
+
+  /* Formulaire : champs et bouton en pleine largeur */
+  .ct-input, .ct-textarea, .ct-submit { width: 100%; }
+}
+
+/* 4) Très petits écrans (max-width: 380px) — iPhone SE */
+@media (max-width: 380px) {
+  :root { --gutter: 16px; }
+  .site-logo svg { max-width: 140px; }
+}
