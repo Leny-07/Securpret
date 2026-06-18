@@ -1,3 +1,4 @@
+
 :root {
   --color-primary: #314275;
   --color-primary-dark: #071637;
@@ -50,7 +51,7 @@ ul{list-style:none;padding:0;margin:0;}
   display:flex;align-items:center;justify-content:space-between;
   height:80px;max-width:var(--container-max);margin:0 auto;padding:0 var(--gutter);
 }
-/* Logo SVG inline — taille exacte comme dans la maquette */
+/* Logo SVG inline â€” taille exacte comme dans la maquette */
 .site-logo{
   display:flex;align-items:center;flex-shrink:0;
 }
@@ -203,7 +204,7 @@ ul{list-style:none;padding:0;margin:0;}
 .testimonials__rating-stars svg{width:20px;height:20px;}
 .testimonials__rating-label{font-family:var(--font-mono);font-size:16px;color:rgba(255,255,255,0.6);margin-left:8px;}
 
-/* ===== CAROUSEL AVIS VÉRIFIÉS ===== */
+/* ===== CAROUSEL AVIS VÃ‰RIFIÃ‰S ===== */
 .av-carousel{position:relative;overflow:hidden;}
 .av-carousel__track{display:flex;gap:32px;transition:transform .45s cubic-bezier(.4,0,.2,1);}
 .av-carousel__slide{flex:0 0 calc((100% - 64px) / 3);min-width:0;}
@@ -288,8 +289,9 @@ ul{list-style:none;padding:0;margin:0;}
   .site-footer__cols{grid-template-columns:1fr 1fr;gap:40px;}
   .timeline::before{left:30px;}
   .timeline__step,.timeline__step:nth-child(even){direction:ltr;grid-template-columns:60px 1fr;gap:24px;}
-  .timeline__dot{left:30px;}
-  .timeline__num{text-align:left;font-size:36px;}
+  .timeline__step,.timeline__step:nth-child(even){align-items:start;}
+  .timeline__dot{display:none;}
+  .timeline__num{text-align:center;font-size:32px;line-height:1;background:var(--color-cream);padding:6px 0;position:relative;z-index:2;}
 }
 @media(max-width:768px){
   :root{--gutter:20px;}
@@ -992,32 +994,32 @@ ul{list-style:none;padding:0;margin:0;}
 
 
 /* ============================================================= */
-/* === RESPONSIVE — FILETS DE SÉCURITÉ GLOBAUX (375px+) ======== */
-/* Ajouté après audit : le site était déjà responsive par page.  */
-/* Ces règles garantissent zéro débordement horizontal et des    */
-/* médias fluides sur tous les écrans, sans modifier le desktop.  */
+/* === RESPONSIVE â€” FILETS DE SÃ‰CURITÃ‰ GLOBAUX (375px+) ======== */
+/* AjoutÃ© aprÃ¨s audit : le site Ã©tait dÃ©jÃ  responsive par page.  */
+/* Ces rÃ¨gles garantissent zÃ©ro dÃ©bordement horizontal et des    */
+/* mÃ©dias fluides sur tous les Ã©crans, sans modifier le desktop.  */
 /* ============================================================= */
 
-/* 1) Empêcher tout débordement horizontal de la page */
+/* 1) EmpÃªcher tout dÃ©bordement horizontal de la page */
 html, body { overflow-x: hidden; max-width: 100%; }
 
-/* 2) Médias fluides par défaut (images, svg, vidéos) */
+/* 2) MÃ©dias fluides par dÃ©faut (images, svg, vidÃ©os) */
 img, svg, video, picture { max-width: 100%; height: auto; }
-/* Exception : on préserve les <img> qui ont une hauteur fixée volontairement
-   (photos hero/portraits) déjà gérées par les media queries existantes. */
+/* Exception : on prÃ©serve les <img> qui ont une hauteur fixÃ©e volontairement
+   (photos hero/portraits) dÃ©jÃ  gÃ©rÃ©es par les media queries existantes. */
 .ae-hero__img-wrap img,
 .ne-hero__img-wrap img,
 .ne-fondateurs__photo-main img,
 .ne-fondateurs__photo-frame img,
 .ne-equilibre__photo img { height: 100%; }
 
-/* 3) Mobile (max-width: 768px) — ajustements fins */
+/* 3) Mobile (max-width: 768px) â€” ajustements fins */
 @media (max-width: 768px) {
-  /* Titres très grands : éviter qu'un mot long ne déborde */
+  /* Titres trÃ¨s grands : Ã©viter qu'un mot long ne dÃ©borde */
   .hero__title, .ae-hero__title, .ne-hero__title,
   .ct-hero__title, .legal-hero__title { word-break: break-word; hyphens: auto; }
 
-  /* Conteneurs : padding latéral garanti */
+  /* Conteneurs : padding latÃ©ral garanti */
   .container, .ae-hero, .ne-hero, .ct-hero { padding-left: var(--gutter); padding-right: var(--gutter); }
 
   /* Boutons CTA en pleine largeur pour le confort tactile */
@@ -1028,7 +1030,7 @@ img, svg, video, picture { max-width: 100%; height: auto; }
   .ct-input, .ct-textarea, .ct-submit { width: 100%; }
 }
 
-/* 4) Très petits écrans (max-width: 380px) — iPhone SE */
+/* 4) TrÃ¨s petits Ã©crans (max-width: 380px) â€” iPhone SE */
 @media (max-width: 380px) {
   :root { --gutter: 16px; }
   .site-logo svg { max-width: 140px; }
